@@ -1,97 +1,154 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# PronouncePal
 
-# Getting Started
+iOS-first, Android-ready React Native app for practicing English pronunciation with AI characters.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Project Structure
 
-## Step 1: Start Metro
-
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
-
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+```
+src/
+├── app/                    # Application layer
+│   ├── components/         # Reusable UI components
+│   │   ├── Button.tsx      # Custom button component
+│   │   ├── Text.tsx        # Typography component
+│   │   └── theme.ts        # Global theme system
+│   ├── navigation/         # Navigation configuration
+│   │   └── AppNavigator.tsx
+│   └── screens/            # Screen components
+│       ├── OnboardingScreen.tsx
+│       ├── HomeScreen.tsx
+│       ├── ScenarioPickerScreen.tsx
+│       ├── SessionScreen.tsx
+│       ├── DrillScreen.tsx
+│       ├── PaywallScreen.tsx
+│       └── ProfileScreen.tsx
+├── lib/                    # Utilities and external integrations
+│   ├── api.ts              # API layer with stubbed endpoints
+│   └── utils.ts            # Utility functions
+├── state/                  # Global state management
+│   └── stores/
+│       ├── userStore.ts    # User state (Zustand)
+│       └── sessionStore.ts # Session state (Zustand)
+├── types/                  # TypeScript type definitions
+│   └── index.ts
+└── assets/                 # Static assets
+    ├── images/
+    └── fonts/
 ```
 
-## Step 2: Build and run your app
+## Features (Scaffold)
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### ✅ Completed
+- [x] React Native project setup with TypeScript
+- [x] Navigation system with all required screens
+- [x] Global state management (Zustand)
+- [x] Folder structure aligned with PRD
+- [x] Basic styling system and reusable components
+- [x] Stubbed API layer with placeholder endpoints
+- [x] PRD section comments throughout codebase
 
-### Android
+### 🚧 Placeholder Screens
+- **Onboarding**: User introduction and permissions
+- **Home**: Dashboard with quick actions and progress
+- **ScenarioPicker**: Browse and select practice scenarios
+- **Session**: Main practice session with AI character
+- **Drill**: Targeted pronunciation drills
+- **Paywall**: Premium subscription upgrade
+- **Profile**: User settings and progress overview
 
-```sh
-# Using npm
+### 📋 API Endpoints (Stubbed)
+- `POST /v1/speech` - Speech recognition and pronunciation analysis
+- `POST /v1/reply` - AI character responses
+- `POST /v1/drills/generate` - Generate targeted drills
+- `GET /v1/scenarios` - Get available scenarios
+
+## Getting Started
+
+### Prerequisites
+- Node.js >= 20
+- React Native CLI
+- iOS Simulator (for iOS development)
+- Android Studio and emulator (for Android development)
+
+### Installation
+
+1. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+2. iOS setup:
+```bash
+cd ios
+bundle install
+bundle exec pod install
+cd ..
+```
+
+3. Run the app:
+```bash
+# iOS
+npm run ios
+# or
+yarn ios
+
+# Android
 npm run android
-
-# OR using Yarn
+# or
 yarn android
 ```
 
-### iOS
+## Development Notes
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+- All screens are currently placeholders with UI mockups
+- API calls return mock data for development
+- State management is set up but not fully integrated
+- Navigation between screens is functional
+- Theme system provides consistent styling
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## Next Steps (Not Implemented Yet)
 
-```sh
-bundle install
-```
+1. **Speech Recognition Integration**
+   - Integrate with speech-to-text service
+   - Implement real-time audio processing
+   - Add microphone permissions handling
 
-Then, and every time you update your native dependencies, run:
+2. **AI Character System**
+   - Implement conversation flow logic
+   - Add character avatars and animations
+   - Integrate with AI response generation
 
-```sh
-bundle exec pod install
-```
+3. **Pronunciation Analysis**
+   - Implement phonetic analysis
+   - Add mistake detection algorithms
+   - Create feedback visualization
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+4. **User Authentication**
+   - Add login/signup flows
+   - Implement user session management
+   - Add social auth options
 
-```sh
-# Using npm
-npm run ios
+5. **Premium Features**
+   - Integrate in-app purchases
+   - Add subscription management
+   - Implement feature gating
 
-# OR using Yarn
-yarn ios
-```
+6. **Progress Tracking**
+   - Add analytics integration
+   - Implement progress persistence
+   - Create detailed reporting
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## Architecture Principles
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+Following user rules for clean, maintainable code:
+- SOLID principles applied throughout
+- Low cyclomatic complexity (<10)
+- TypeScript for type safety
+- Modular component architecture
+- Consistent error handling
+- Performance-optimized state management
 
-## Step 3: Modify your app
+## PRD Alignment
 
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This scaffold aligns with PRD Section 4: Scope — MVP Features, providing a solid foundation for implementing the core functionality while maintaining clean architecture and following React Native best practices.
