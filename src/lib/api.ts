@@ -215,26 +215,35 @@ export const scenariosAPI = {
               {
                 id: 'scenario-1',
                 title: 'Coffee Shop Order',
-                description: 'Practice ordering coffee and asking questions at a café',
+                description:
+                  'Practice ordering coffee and asking questions at a café',
                 difficulty: 'beginner',
                 category: 'Daily Life',
                 estimatedDuration: 5,
+                estimatedMinutes: 5,
+                isPremium: false,
               },
               {
                 id: 'scenario-2',
                 title: 'Job Interview',
-                description: 'Prepare for common interview questions and responses',
+                description:
+                  'Prepare for common interview questions and responses',
                 difficulty: 'intermediate',
                 category: 'Professional',
                 estimatedDuration: 10,
+                estimatedMinutes: 10,
+                isPremium: true,
               },
               {
                 id: 'scenario-3',
                 title: 'Doctor Appointment',
-                description: 'Learn to describe symptoms and understand medical advice',
+                description:
+                  'Learn to describe symptoms and understand medical advice',
                 difficulty: 'intermediate',
                 category: 'Healthcare',
                 estimatedDuration: 8,
+                estimatedMinutes: 8,
+                isPremium: false,
               },
             ],
           },
@@ -259,10 +268,13 @@ export const scenariosAPI = {
           data: {
             id: scenarioId,
             title: 'Coffee Shop Order',
-            description: 'Practice ordering coffee and asking questions at a café',
+            description:
+              'Practice ordering coffee and asking questions at a café',
             difficulty: 'beginner',
             category: 'Daily Life',
             estimatedDuration: 5,
+            estimatedMinutes: 5,
+            isPremium: false,
           },
         });
       }, 400);

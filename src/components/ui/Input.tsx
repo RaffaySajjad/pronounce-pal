@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextInput, TextInputProps, View, StyleSheet } from 'react-native';
-import { Body, Caption } from './Typography';
+import { Body, Caption1 } from './Typography';
 import { palette, radius, spacing } from '../../theme/colors';
 
 interface InputProps extends TextInputProps {
@@ -53,9 +53,9 @@ export const Input: React.FC<InputProps> = ({
         {...props}
       />
       {error && (
-        <Caption color={palette.danger} style={styles.errorText}>
+        <Caption1 color={palette.danger} style={styles.errorText}>
           {error}
-        </Caption>
+        </Caption1>
       )}
     </View>
   );

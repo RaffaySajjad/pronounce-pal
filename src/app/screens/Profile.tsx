@@ -3,7 +3,7 @@ import { View, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { TabParamList } from '../../types';
-import { Title, Body, Caption } from '../../components/ui/Typography';
+import { Title, Body, Caption1 } from '../../components/ui/Typography';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
 import { ListItem } from '../../components/ui/ListItem';
@@ -113,7 +113,7 @@ const Profile: React.FC<Props> = ({ navigation: _ }) => {
             </View>
             
             <Title style={styles.nameContainer}>John Doe</Title>
-            <Caption color={palette.textMuted} style={styles.emailContainer}>john.doe@email.com</Caption>
+            <Caption1 color={palette.textMuted} style={styles.emailContainer}>john.doe@email.com</Caption1>
             
             <Chip variant="warning">Free Plan</Chip>
           </View>
@@ -123,32 +123,32 @@ const Profile: React.FC<Props> = ({ navigation: _ }) => {
             <View style={styles.statsRow}>
               <Card variant="default" style={styles.statsCard}>
                 <Title color={palette.primary} style={{ marginBottom: spacing.xs }}>127</Title>
-                <Caption color={palette.textMuted} style={{ textAlign: 'center' }}>
+                <Caption1 color={palette.textMuted} style={{ textAlign: 'center' }}>
                   Sessions Completed
-                </Caption>
+                </Caption1>
               </Card>
               
               <Card variant="default" style={styles.statsCard}>
                 <Title color={palette.success} style={{ marginBottom: spacing.xs }}>87%</Title>
-                <Caption color={palette.textMuted} style={{ textAlign: 'center' }}>
+                <Caption1 color={palette.textMuted} style={{ textAlign: 'center' }}>
                   Avg. Accuracy
-                </Caption>
+                </Caption1>
               </Card>
             </View>
 
             <View style={styles.statsRow}>
               <Card variant="default" style={styles.statsCard}>
                 <Title color={palette.warning} style={{ marginBottom: spacing.xs }}>23</Title>
-                <Caption color={palette.textMuted} style={{ textAlign: 'center' }}>
+                <Caption1 color={palette.textMuted} style={{ textAlign: 'center' }}>
                   Day Streak
-                </Caption>
+                </Caption1>
               </Card>
               
               <Card variant="default" style={styles.statsCard}>
                 <Title color={palette.primary} style={{ marginBottom: spacing.xs }}>4.2h</Title>
-                <Caption color={palette.textMuted} style={{ textAlign: 'center' }}>
+                <Caption1 color={palette.textMuted} style={{ textAlign: 'center' }}>
                   Practice Time
-                </Caption>
+                </Caption1>
               </Card>
             </View>
           </Section>
@@ -187,13 +187,13 @@ const Profile: React.FC<Props> = ({ navigation: _ }) => {
               <ListItem
                 title="Audio Quality"
                 subtitle="High quality audio processing"
-                rightElement={<Caption color={palette.textMuted}>High</Caption>}
+                rightElement={<Caption1 color={palette.textMuted}>High</Caption1>}
               />
               
               <ListItem
                 title="Practice Reminders"
                 subtitle="Daily practice notifications"
-                rightElement={<Caption color={palette.textMuted}>8:00 AM</Caption>}
+                rightElement={<Caption1 color={palette.textMuted}>8:00 AM</Caption1>}
               />
             </Card>
           </Section>
@@ -204,25 +204,25 @@ const Profile: React.FC<Props> = ({ navigation: _ }) => {
               <ListItem
                 title="Help Center"
                 subtitle="FAQs and tutorials"
-                rightElement={<Caption color={palette.textMuted}>›</Caption>}
+                rightElement={<Caption1 color={palette.textMuted}>›</Caption1>}
               />
               
               <ListItem
                 title="Contact Support"
                 subtitle="Get help from our team"
-                rightElement={<Caption color={palette.textMuted}>›</Caption>}
+                rightElement={<Caption1 color={palette.textMuted}>›</Caption1>}
               />
               
               <ListItem
                 title="Privacy Policy"
                 subtitle="How we protect your data"
-                rightElement={<Caption color={palette.textMuted}>›</Caption>}
+                rightElement={<Caption1 color={palette.textMuted}>›</Caption1>}
               />
               
               <ListItem
                 title="Terms of Service"
                 subtitle="App usage terms"
-                rightElement={<Caption color={palette.textMuted}>›</Caption>}
+                rightElement={<Caption1 color={palette.textMuted}>›</Caption1>}
               />
             </Card>
           </Section>
@@ -237,7 +237,7 @@ const Profile: React.FC<Props> = ({ navigation: _ }) => {
             </Button>
             
             <TouchableOpacity style={styles.deleteButton}>
-              <Caption color={palette.danger}>Delete Account</Caption>
+              <Caption1 color={palette.danger}>Delete Account</Caption1>
             </TouchableOpacity>
           </View>
         </View>

@@ -6,7 +6,7 @@ import { RouteProp } from '@react-navigation/native';
 import Animated, { useSharedValue, useAnimatedStyle, withRepeat, withTiming } from 'react-native-reanimated';
 import HapticFeedback from 'react-native-haptic-feedback';
 import { RootStackParamList } from '../../types';
-import { Title, Subtitle, Body, Caption } from '../../components/ui/Typography';
+import { Title, Subtitle, Body, Caption1 } from '../../components/ui/Typography';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
 import { Chip } from '../../components/ui/Chip';
@@ -211,9 +211,9 @@ const Session: React.FC<Props> = ({ navigation, route }) => {
 
         {/* Recording Section */}
         <View style={styles.recordingSection}>
-          <Caption color={palette.textMuted} style={{ textAlign: 'center', marginBottom: spacing.md }}>
+          <Caption1 color={palette.textMuted} style={{ textAlign: 'center', marginBottom: spacing.md }}>
             Your turn to speak:
-          </Caption>
+          </Caption1>
           
           <Body color={palette.textMuted} style={{ textAlign: 'center', marginBottom: spacing.xl, fontStyle: 'italic' }}>
             Try saying: "Hi, I'd like to order a large coffee please"
@@ -239,11 +239,11 @@ const Session: React.FC<Props> = ({ navigation, route }) => {
             </TouchableOpacity>
           </View>
 
-          {/* Live Caption Area */}
+          {/* Live Caption1 Area */}
           <Card style={{ width: '100%', marginBottom: spacing.lg }}>
-            <Caption color={palette.textMuted} style={{ textAlign: 'center', fontStyle: 'italic' }}>
+            <Caption1 color={palette.textMuted} style={{ textAlign: 'center', fontStyle: 'italic' }}>
               {isRecording ? 'Listening...' : 'Tap microphone to speak'}
-            </Caption>
+            </Caption1>
           </Card>
 
           {/* Feedback Chips */}

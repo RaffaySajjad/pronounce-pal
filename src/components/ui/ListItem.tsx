@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacity, View, StyleSheet } from 'react-native';
 import Animated, { useSharedValue, useAnimatedStyle, withSpring } from 'react-native-reanimated';
 import HapticFeedback from 'react-native-haptic-feedback';
-import { Body, Caption } from './Typography';
+import { Body, Caption1 } from './Typography';
 import { spacing } from '../../theme/colors';
 
 const AnimatedTouchable = Animated.createAnimatedComponent(TouchableOpacity);
@@ -64,7 +64,7 @@ export const ListItem: React.FC<ListItemProps> = ({
         {leftElement && <View style={styles.leftElement}>{leftElement}</View>}
         <View style={styles.content}>
           <Body>{title}</Body>
-          {subtitle && <Caption style={styles.subtitle}>{subtitle}</Caption>}
+          {subtitle && <Caption1 style={styles.subtitle}>{subtitle}</Caption1>}
         </View>
         {rightElement && <View style={styles.rightElement}>{rightElement}</View>}
       </View>
@@ -82,7 +82,7 @@ export const ListItem: React.FC<ListItemProps> = ({
       {leftElement && <View style={styles.leftElement}>{leftElement}</View>}
       <View style={styles.content}>
         <Body>{title}</Body>
-        {subtitle && <Caption style={styles.subtitle}>{subtitle}</Caption>}
+        {subtitle && <Caption1 style={styles.subtitle}>{subtitle}</Caption1>}
       </View>
       {rightElement && <View style={styles.rightElement}>{rightElement}</View>}
     </AnimatedTouchable>

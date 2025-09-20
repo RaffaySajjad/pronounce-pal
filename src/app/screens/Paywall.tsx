@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import LinearGradient from 'react-native-linear-gradient';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../types';
-import { Title, Subtitle, Body, Caption } from '../../components/ui/Typography';
+import { Title, Subtitle, Body, Caption1 } from '../../components/ui/Typography';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
 import { ListItem } from '../../components/ui/ListItem';
@@ -141,9 +141,9 @@ const Paywall: React.FC<Props> = ({ navigation }) => {
               <Body color={selectedPlan === 'monthly' ? palette.textOnPrimary : palette.text}>
                 Monthly
               </Body>
-              <Caption color={selectedPlan === 'monthly' ? palette.textOnPrimary : palette.textMuted}>
+              <Caption1 color={selectedPlan === 'monthly' ? palette.textOnPrimary : palette.textMuted}>
                 {planDetails.monthly.price}/{planDetails.monthly.period}
-              </Caption>
+              </Caption1>
             </TouchableOpacity>
             
             <TouchableOpacity
@@ -153,13 +153,13 @@ const Paywall: React.FC<Props> = ({ navigation }) => {
               <Body color={selectedPlan === 'yearly' ? palette.textOnPrimary : palette.text}>
                 Yearly
               </Body>
-              <Caption color={selectedPlan === 'yearly' ? palette.textOnPrimary : palette.textMuted}>
+              <Caption1 color={selectedPlan === 'yearly' ? palette.textOnPrimary : palette.textMuted}>
                 {planDetails.yearly.price}/{planDetails.yearly.period}
-              </Caption>
+              </Caption1>
               {planDetails.yearly.savings && (
-                <Caption color={palette.success} style={{ fontWeight: '600' }}>
+                <Caption1 color={palette.success} style={{ fontWeight: '600' }}>
                   {planDetails.yearly.savings}
-                </Caption>
+                </Caption1>
               )}
             </TouchableOpacity>
           </View>
@@ -224,16 +224,16 @@ const Paywall: React.FC<Props> = ({ navigation }) => {
           {/* Footer */}
           <View style={styles.footer}>
             <TouchableOpacity onPress={handleClose}>
-              <Caption color={palette.textMuted}>Maybe Later</Caption>
+              <Caption1 color={palette.textMuted}>Maybe Later</Caption1>
             </TouchableOpacity>
             
-            <Caption color={palette.textMuted} style={{ textAlign: 'center', marginTop: spacing.md }}>
+            <Caption1 color={palette.textMuted} style={{ textAlign: 'center', marginTop: spacing.md }}>
               7-day free trial, then {planDetails[selectedPlan].price} per {planDetails[selectedPlan].period}
-            </Caption>
+            </Caption1>
             
-            <Caption color={palette.textMuted} style={{ textAlign: 'center', marginTop: spacing.xs }}>
+            <Caption1 color={palette.textMuted} style={{ textAlign: 'center', marginTop: spacing.xs }}>
               Cancel anytime
-            </Caption>
+            </Caption1>
           </View>
         </View>
       </ScrollView>

@@ -22,7 +22,7 @@ const OnboardingScreen: React.FC<Props> = ({ navigation }) => {
     // - Request microphone permissions
     // - Show app features
     // - Navigate to home
-    navigation.navigate('Home');
+    navigation.navigate('Main');
   };
 
   return (

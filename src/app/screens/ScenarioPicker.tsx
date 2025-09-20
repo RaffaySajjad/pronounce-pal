@@ -5,7 +5,7 @@ import { CompositeNavigationProp } from '@react-navigation/native';
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList, TabParamList, Scenario } from '../../types';
-import { Title, Body, Caption } from '../../components/ui/Typography';
+import { Title, Body, Caption1 } from '../../components/ui/Typography';
 import { Card } from '../../components/ui/Card';
 import { Chip } from '../../components/ui/Chip';
 import { Section } from '../../components/ui/Section';
@@ -58,7 +58,9 @@ const scenarios: Scenario[] = [
     id: 'coffee-shop',
     title: 'Coffee Shop',
     description: 'Order your favorite drink and practice common cafe interactions',
-    difficulty: 'Beginner',
+    difficulty: 'beginner',
+    category: 'Daily Life',
+    estimatedDuration: 5,
     estimatedMinutes: 5,
     isPremium: false,
   },
@@ -66,7 +68,9 @@ const scenarios: Scenario[] = [
     id: 'job-interview',
     title: 'Job Interview',
     description: 'Practice professional conversation and interview skills',
-    difficulty: 'Intermediate',
+    difficulty: 'intermediate',
+    category: 'Professional',
+    estimatedDuration: 10,
     estimatedMinutes: 10,
     isPremium: true,
   },
@@ -74,7 +78,9 @@ const scenarios: Scenario[] = [
     id: 'restaurant',
     title: 'Restaurant',
     description: 'Make reservations, order food, and interact with waitstaff',
-    difficulty: 'Beginner',
+    difficulty: 'beginner',
+    category: 'Dining',
+    estimatedDuration: 8,
     estimatedMinutes: 8,
     isPremium: true,
   },
@@ -82,7 +88,9 @@ const scenarios: Scenario[] = [
     id: 'phone-call',
     title: 'Phone Call',
     description: 'Handle business calls and phone conversations confidently',
-    difficulty: 'Advanced',
+    difficulty: 'advanced',
+    category: 'Professional',
+    estimatedDuration: 12,
     estimatedMinutes: 12,
     isPremium: true,
   },
@@ -116,9 +124,9 @@ const ScenarioPicker: React.FC<Props> = ({ navigation }) => {
         <View style={styles.content}>
           <View style={styles.header}>
             <Title style={{ marginBottom: spacing.xs }}>Choose a Scenario</Title>
-            <Caption color={palette.textMuted}>
+            <Caption1 color={palette.textMuted}>
               Practice real-world conversations
-            </Caption>
+            </Caption1>
           </View>
 
           <Section>
@@ -132,13 +140,13 @@ const ScenarioPicker: React.FC<Props> = ({ navigation }) => {
                     <Body style={{ fontWeight: '600' }}>{scenario.title}</Body>
                     <View style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.xs }}>
                       <Chip variant="default">
-                        <Caption color={getDifficultyColor(scenario.difficulty)}>
+                        <Caption1 color={getDifficultyColor(scenario.difficulty)}>
                           {scenario.difficulty}
-                        </Caption>
+                        </Caption1>
                       </Chip>
                       {scenario.isPremium && (
                         <Chip variant="warning">
-                          <Caption>Pro</Caption>
+                          <Caption1>Pro</Caption1>
                         </Chip>
                       )}
                     </View>
@@ -148,9 +156,9 @@ const ScenarioPicker: React.FC<Props> = ({ navigation }) => {
                     <Body color={palette.textMuted} style={{ marginBottom: spacing.xs }}>
                       {scenario.description}
                     </Body>
-                    <Caption color={palette.textMuted}>
+                    <Caption1 color={palette.textMuted}>
                       ~{scenario.estimatedMinutes} minutes
-                    </Caption>
+                    </Caption1>
                   </View>
                 </Card>
               </TouchableOpacity>
@@ -160,9 +168,9 @@ const ScenarioPicker: React.FC<Props> = ({ navigation }) => {
               <Body style={{ fontWeight: '600', marginBottom: spacing.xs }}>
                 Unlock More Scenarios
               </Body>
-              <Caption color={palette.textMuted}>
+              <Caption1 color={palette.textMuted}>
                 Upgrade to Pro for access to advanced scenarios and unlimited practice sessions.
-              </Caption>
+              </Caption1>
             </View>
           </Section>
         </View>

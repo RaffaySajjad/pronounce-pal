@@ -3,7 +3,7 @@ import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { TabParamList } from '../../types';
-import { Title, Body, Caption } from '../../components/ui/Typography';
+import { Title, Body, Caption1 } from '../../components/ui/Typography';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
 import { Chip } from '../../components/ui/Chip';
@@ -146,16 +146,16 @@ const Drill: React.FC<Props> = ({ navigation: _ }) => {
         <View style={styles.content}>
           <View style={styles.header}>
             <Title style={{ marginBottom: spacing.xs }}>Minimal Pairs</Title>
-            <Caption color={palette.textMuted}>
+            <Caption1 color={palette.textMuted}>
               Listen and choose the correct pronunciation
-            </Caption>
+            </Caption1>
           </View>
 
           <View style={styles.scoreContainer}>
             <Title color={palette.primary} style={styles.scoreText}>
               {currentScore}
             </Title>
-            <Caption color={palette.textMuted}>Points</Caption>
+            <Caption1 color={palette.textMuted}>Points</Caption1>
           </View>
 
           <Section title="Round 1">
@@ -170,7 +170,7 @@ const Drill: React.FC<Props> = ({ navigation: _ }) => {
                   onPress={() => handleAnswer(true)}
                 >
                   <Body style={{ fontWeight: '600' }}>ship</Body>
-                  <Caption color={palette.textMuted}>/ʃɪp/</Caption>
+                  <Caption1 color={palette.textMuted}>/ʃɪp/</Caption1>
                 </TouchableOpacity>
                 
                 <TouchableOpacity 
@@ -178,7 +178,7 @@ const Drill: React.FC<Props> = ({ navigation: _ }) => {
                   onPress={() => handleAnswer(false)}
                 >
                   <Body style={{ fontWeight: '600' }}>sheep</Body>
-                  <Caption color={palette.textMuted}>/ʃiːp/</Caption>
+                  <Caption1 color={palette.textMuted}>/ʃiːp/</Caption1>
                 </TouchableOpacity>
               </View>
 
@@ -216,9 +216,9 @@ const Drill: React.FC<Props> = ({ navigation: _ }) => {
       <View style={styles.content}>
         <View style={styles.header}>
           <Title style={{ marginBottom: spacing.xs }}>Pronunciation Drills</Title>
-          <Caption color={palette.textMuted}>
+          <Caption1 color={palette.textMuted}>
             Practice specific sounds and patterns
-          </Caption>
+          </Caption1>
         </View>
 
         <Section>
@@ -232,13 +232,13 @@ const Drill: React.FC<Props> = ({ navigation: _ }) => {
                   <Body style={{ fontWeight: '600' }}>{drill.title}</Body>
                   <View style={{ flexDirection: 'row', alignItems: 'center', gap: spacing.xs }}>
                     <Chip variant="default">
-                      <Caption color={getDifficultyColor(drill.difficulty)}>
+                      <Caption1 color={getDifficultyColor(drill.difficulty)}>
                         {drill.difficulty}
-                      </Caption>
+                      </Caption1>
                     </Chip>
                     {drill.completed && (
                       <Chip variant="success">
-                        <Caption>✓</Caption>
+                        <Caption1>✓</Caption1>
                       </Chip>
                     )}
                   </View>

@@ -24,6 +24,8 @@ const MOCK_SCENARIOS: Scenario[] = [
     difficulty: 'beginner',
     category: 'Daily Life',
     estimatedDuration: 5,
+    estimatedMinutes: 5,
+    isPremium: false,
   },
   {
     id: 'scenario-2',
@@ -32,6 +34,8 @@ const MOCK_SCENARIOS: Scenario[] = [
     difficulty: 'intermediate',
     category: 'Professional',
     estimatedDuration: 10,
+    estimatedMinutes: 10,
+    isPremium: true,
   },
   {
     id: 'scenario-3',
@@ -40,6 +44,8 @@ const MOCK_SCENARIOS: Scenario[] = [
     difficulty: 'intermediate',
     category: 'Healthcare',
     estimatedDuration: 8,
+    estimatedMinutes: 8,
+    isPremium: false,
   },
 ];
 

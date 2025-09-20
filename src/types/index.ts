@@ -16,6 +16,8 @@ export interface Scenario {
   difficulty: 'beginner' | 'intermediate' | 'advanced';
   category: string;
   estimatedDuration: number; // in minutes
+  estimatedMinutes: number; // alias for estimatedDuration
+  isPremium: boolean;
 }
 
 export interface Session {
@@ -57,7 +59,10 @@ export type RootStackParamList = {
   Onboarding: undefined;
   Main: undefined;
   Session: { scenarioId: string };
+  Drill: { drillId: string };
   Paywall: undefined;
+  Profile: undefined;
+  ScenarioPicker: undefined;
 };
 
 export type TabParamList = {
